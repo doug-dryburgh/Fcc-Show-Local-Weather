@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>FCC - Show the Local Weather</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> </head>
+
+<body>
+    <div id="pageContainer" class="container">
+        <!-- Top row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-6">
+                <div id="locationDetails" class="header">
+                    <h1 id="myLoc" class="title">Loading location..</h1>
+                    <h2 class="subTitle">Local Weather</h2> </div>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <div id="mainInfo" class="mainDetails"> <img id="weatherIcon" alt="weather icon"></img>
+                    <h1 id="temp"></h1> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <div id="additionalInfo" class="additionalDetails">
+                    <p id="addConditions"></p>
+                </div>
+            </div>
+        </div>
+        <!-- unit toggle -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <div id="unitToggle" class="units">
+                    <h3 id="units"></h3> </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
