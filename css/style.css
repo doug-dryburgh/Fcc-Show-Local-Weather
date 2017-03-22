@@ -4,76 +4,78 @@ body {
     height: 100%;
 }
 
-.container {
+#pageContainer {
     width: 100%;
     min-height: 100%;
     background-size: cover;
 }
 
-.header {
-    background-color: rgba(240, 240, 240, 0.5);
-    width: 100%;
-    margin-top: 40px;
-    padding: 0px 0px 0px 0px;
-    border-radius: 50px;
+#locationDetails {
+    display: inline-block;
+    background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    margin-top: 20px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 20px;
 }
 
-.units {
-    background-color: rgba(240, 240, 240, 0.5);
-    width: 150px;
-    margin: 40px auto auto auto;
-    padding: 0px 0px 0px 0px;
-    border-radius: 60px;
+#mainInfo {
+    width: 300px;
+    background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    margin: 20px auto auto auto;
+    border-radius: 20px;
+}
+
+#additionalInfo {
+    background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    width: 200px;
+    margin: 20px auto auto auto;
+    border-radius: 20px;
+}
+
+#unitToggle:hover {
+    background-color: white;
+    border-radius: 20px;
     cursor: pointer;
-}
-
-.mainDetails {
-    background-color: rgba(240, 240, 240, 0.5);
-    width: 100%;
-    margin: 40px auto auto auto;
-    padding: 5px 0px 0px 0px;
-    border-radius: 50px;
-}
-
-.additionalDetails {
-    background-color: rgba(240, 240, 240, 0.5);
-    width: 100%;
-    margin: 40px auto auto auto;
-    padding: 0px 0px 0px 0px;
-    border-radius: 50px;
-}
-
-h1 {
-    font-family: 'Cabin', sans-serif;
-    font-size: 3em;
-    color: black;
-    text-align: center;
-}
-
-h2 {
-    font-family: 'Cabin', sans-serif;
-    font-size: 1.75em;
-    color: black;
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Cabin', sans-serif;
-    font-size: 1.25em;
-    color: black;
-    text-align: center;
-}
-
-p {
-    font-family: 'Cabin', sans-serif;
-    font-size: 1.25em;
-    color: black;
-    text-align: center;
 }
 
 img {
     display: block;
-    margin: 0 auto;
-    height: 150px;
-    width: 150px;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Cabin', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+@media only screen and (max-width: 400px) {
+    img {
+        height: 150px;
+        width: 150px;
+    }
+    #mainInfo {
+        width: 200px;
+    }
 }

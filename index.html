@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>FCC - Show the Local Weather</title>
+    <meta name="description" content="A FCC project to use the open weather API to display the current weather conditions at your location.">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css"> </head>
 
@@ -9,36 +11,35 @@
     <div id="pageContainer" class="container">
         <!-- Top row -->
         <div class="row">
-            <div class="col-xs-12 col-sm-7 col-md-6">
-                <div id="locationDetails" class="header">
-                    <h1 id="myLoc" class="title">Loading location..</h1>
-                    <h2 class="subTitle">Local Weather</h2> </div>
+            <div class="col-xs-12">
+                <div id="locationDetails">
+                    <h1 id="myLoc">Loading location..</h1>
+                    <h2>Local Weather</h2> </div>
             </div>
         </div>
         <!-- Main content -->
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                <div id="mainInfo" class="mainDetails"> <img id="weatherIcon" alt="weather icon"></img>
-                    <h1 id="temp"></h1> </div>
+            <div class="center-block col-xs-12">
+                <div id="mainInfo"> <img id="weatherIcon" alt="weather icon">
+                    <h1 id="temp"></h1></div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                <div id="additionalInfo" class="additionalDetails">
+            <div class="center-block col-xs-12">
+                <div id="additionalInfo">
                     <p id="addConditions"></p>
+                    <div id="unitToggle">
+                        <h3 id="units"></h3> </div>
                 </div>
             </div>
         </div>
-        <!-- unit toggle -->
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                <div id="unitToggle" class="units">
-                    <h3 id="units"></h3> </div>
-            </div>
-        </div>
     </div>
+    <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/js.js"></script>
 </body>
 
 </html>
+<!-- Credits
+1) Font: https://fonts.google.com/specimen/Cabin
+2) Background images sourced from: https://www.pexels.com/
+3) Icons sourced from: https://openclipart.org
+-->-->

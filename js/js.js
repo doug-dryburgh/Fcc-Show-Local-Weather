@@ -1,41 +1,29 @@
 $(document).ready(function () {
-    //button animation
-    $("#unitToggle").hover(function () {
-        $(this).css("background-color", "rgba(240, 240, 240, 0.9)");
-    }, function () {
-        $(this).css("background-color", "rgba(240, 240, 240, 0.5)");
-    });
-    //global vars
-    var lat = "";
-    var long = "";
-    var weatherUrl = "";
-    var units = "";
-    var degrees = "";
-    var windSpeed = "";
+    var lat;
+    var long;
+    var weatherUrl;
+    var units = "&units=metric";
+    var degrees = "&degC";
+    var windSpeed = "m/s";
     var imperial = false;
+    var unitDisplay = "Units(&degC)"
 
     function getWeather() {
-        //default unit load
-        if (imperial === false) {
-            units = "&units=metric";
-            degrees = "&degC";
-            windSpeed = "m/s";
-            $("#units").html("Units(&degC)");
-        }
-        //geolocation data
+        $("#units").html(unitDisplay);
+        //GEOLOCATION API
         $.getJSON("http://ip-api.com/json", function (val) {
             lat = val.lat;
             long = val.lon;
-            //api 
+            //WEATHER API 
             weatherUrl = ("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + units + "&appid=409f1cb952a0d8fadf518d0bd02565b8");
             $.getJSON(weatherUrl, function (val) {
-                //background selector 
+                //BACKGROUND & ICON SELECTOR
                 var currentCondition = val.weather[0].icon;
                 switch (currentCondition) {
                 case "01d":
                 case "01n":
                     $("#pageContainer").css("background-image", "url(https://c6.staticflickr.com/1/149/31494822285_8701510ffb_o.jpg)");
-                    $("#weatherIcon").attr("src", "https://i.imgsafe.org/b7489b82ff.png");
+                    $("#weatherIcon").attr("src", "https: //i.imgsafe.org/b7489b82ff.png");
                     break;
                 case "13d":
                 case "13n":
@@ -78,19 +66,22 @@ $(document).ready(function () {
         });
     }
     getWeather();
-    //unit toggle
+    //UNIT TOGGLE
     $("#unitToggle").click(function () {
         if (imperial === false) {
             imperial = true;
             units = "&units=imperial";
             degrees = "&degF";
             windSpeed = "mph";
-            $("#units").html("Units(&degF)");
+            unitDisplay = "Units(&degF)"
             getWeather();
         }
         else {
             imperial = false;
-            $("#units").html("Units(°C)")
+            units = "&units=metric";
+            degrees = "&degC";
+            windSpeed = "m/s";
+            unitDisplay = "Units(&degC)"
             getWeather();
         }
     });
