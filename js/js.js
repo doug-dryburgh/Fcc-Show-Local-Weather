@@ -22,40 +22,40 @@ $(document).ready(function () {
                 switch (currentCondition) {
                 case "01d":
                 case "01n":
-                    $("#pageContainer").css("background-image", "url(https://c6.staticflickr.com/1/149/31494822285_8701510ffb_o.jpg)");
-                    $("#weatherIcon").attr("src", "https: //i.imgsafe.org/b7489b82ff.png");
+                    $("#pageContainer").css("background-image", "url(./images/sunny.jpg)");
+                    $("#weatherIcon").attr("src", "https://i.imgsafe.org/b7489b82ff.png");
                     break;
                 case "13d":
                 case "13n":
-                    $("#pageContainer").css("background-image", "url(https://c1.staticflickr.com/1/744/31348343872_e5131901d8_o.jpg)");
+                    $("#pageContainer").css("background-image", "url(./images/snow.jpg)");
                     $("#weatherIcon").attr("src", "https://i.imgsafe.org/b748b3bace.png");
                     break;
                 case "09d":
                 case "09n":
                 case "10d":
                 case "10n":
-                    $("#pageContainer").css("background-image", "url(https://c8.staticflickr.com/1/78/30685999103_b15932caf8_o.jpg)");
+                    $("#pageContainer").css("background-image", "url(./images/rain.jpg)");
                     $("#weatherIcon").attr("src", "https://i.imgsafe.org/b748a9bba7.png");
                     break;
                 case "03d":
                 case "03n":
                 case "04d":
                 case "04n":
-                    $("#pageContainer").css("background-image", "url(https://c6.staticflickr.com/6/5504/30686001733_3139008abc_o.jpg)");
+                    $("#pageContainer").css("background-image", "url(./images/cloud.jpg)");
                     $("#weatherIcon").attr("src", "https://i.imgsafe.org/b7489629ae.png");
                     break;
                 case "11d":
                 case "11n":
-                    $("#pageContainer").css("background-image", "url(https://c4.staticflickr.com/6/5621/30686004603_b0891c64b1_o.jpg)");
+                    $("#pageContainer").css("background-image", "url(./images/lightning.jpg)");
                     $("#weatherIcon").attr("src", "https://i.imgsafe.org/b7488a0ad2.png");
                     break;
                 case "02d":
                 case "02n":
-                    $("#pageContainer").css("background-image", "url(https://c3.staticflickr.com/1/131/31348350042_8ee5c8fb11_o.jpg)");
+                    $("#pageContainer").css("background-image", "url(./images/part-sun.jpg)");
                     $("#weatherIcon").attr("src", "https://i.imgsafe.org/b748808025.png");
                     break;
                 default:
-                    $("#pageContainer").css("background-image", "url(https://c1.staticflickr.com/6/5563/31348342832_05af1a6842_o.jpg)");
+                    $("#pageContainer").css("background-image", "url(./images/default.jpg)");
                     $("#weatherIcon").attr("src", "https://i.imgsafe.org/b7696835e5.png");
                     break;
                 }
